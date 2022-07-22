@@ -1,9 +1,11 @@
 module.exports = {
   parserPreset: {
     parserOpts: {
-      headerPattern: /^\[#(\d)+\] (.+)$/,
+      headerPattern: new RegExp(
+        /^\[#(\d)+\] (.+)$/
+      ),
       headerCorrespondence: ["references", "subject"],
-   }
+    }
   },
   plugins: [
     {
