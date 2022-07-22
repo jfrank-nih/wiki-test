@@ -2,7 +2,7 @@ module.exports = {
   parserPreset: {
     parserOpts: {
       headerPattern: new RegExp(
-        /^\[#(\d)+\] (.+)$/
+        "^\[#(\d)+\] (.+)$"
       ),
       headerCorrespondence: ["references", "subject"],
     }
