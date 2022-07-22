@@ -11,13 +11,11 @@ on:
     types: [submitted]
 
 jobs:
-  approved:
-    #if: github.event.review.state == 'approved'
+        
+  commitlint:
     runs-on: ubuntu-latest
-
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      # - uses: actions/checkout@v3
-
-      - name: Hello world!
-        run: echo Hello, world!
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v5
