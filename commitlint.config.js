@@ -7,7 +7,9 @@ module.exports = {
     //"header-min-length": [2, "always", 20],
     //"header-max-length": [2, "always", 72],
   },
-  parserOpts: {
-    headerPattern: /^\[#\d+\] .+$/,
-  },
+  parserPreset: {
+    parserOpts: {
+      headerPattern: /^\[#\d+\] .+$/,
+   }
+  }
 };
